@@ -22,11 +22,7 @@ public class DemoActivity extends BaseActivity {
     RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
     private BarChartAdapter mAdapter;
-    /*@BindView(R.id.bar_chart)
-        BarChart mBarChart;
-        @BindView(R.id.hsv)
-        HorizontalScrollView hsv;r
-    */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,34 +46,5 @@ public class DemoActivity extends BaseActivity {
         mAdapter = new BarChartAdapter(DataProvider.getSampleData());
         mRecyclerView.setAdapter(mAdapter);
 
-
-       /* mBarChart.setBarMaxValue(100);
-        for (int i = 0; i < 15; i++) {
-            BarChartModel barChartModel = new BarChartModel();
-            barChartModel.setBarValue(new Random().nextInt(100)); // bar input value, can be customizable
-            barChartModel.setBarColor(BarChartUtils.getRandomColor());
-            barChartModel.setBarTag(null);
-            barChartModel.setBarText(DataProvider.data[i]);
-            mBarChart.addBar(barChartModel);
-        }
-
-        hsv.setSmoothScrollingEnabled(true);
-        hsv.setFillViewport(true);
-
-        hsv.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (oldScrollX < scrollX) {
-                    BarChartModel barChartModel = new BarChartModel();
-                    barChartModel.setBarValue(new Random().nextInt(100)); // bar input value, can be customizable
-                    barChartModel.setBarColor(BarChartUtils.getRandomColor());
-                    barChartModel.setBarTag(null);
-                    barChartModel.setBarText("march" + new Random().nextInt(100));
-                    mBarChart.addBar(barChartModel);
-                } else {
-                    mBarChart.updateBar(oldScrollX, mBarChart.getBar(oldScrollX));
-                }
-            }
-        });*/
     }
 }
